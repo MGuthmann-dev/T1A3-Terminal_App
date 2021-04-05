@@ -1,11 +1,16 @@
-# require "./controllers/RecipesController"
+require "./controllers/TaskController"
 
 module Routes
-    def self.dispatch(request)
+    def self.dispatch(request, param)
         case request
-        when /^n(ame)*/
-            RecipesController::index
-        when /^d(ex)*/
-            RecipesController::show
+        when /^l(ist)*/
+            TaskController::index
+        when /^s(how)*/
+            TaskController::show(param)
+        when /^n(ew)*/
+            TaskController::create
+        when /^d(elete)*/
+            TaskController::destroy(param)
+        end
     end
 end
