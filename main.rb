@@ -7,14 +7,9 @@ begin
     puts "---------- Welcome to the PokeCLI ----------"
     puts""
     prompt = TTY::Prompt.new
-    menu_choices = [
-        {name: 'List', value: 1},
-        {name: 'New', value: 2},
-        {name: 'Release', value: 3},
-        {name: 'Quit', value: 4}
-        ]
+    choices = {List:1, New:2, Release:3, Quit:4 }
         
-    request, param = prompt.select("Menu:", menu_choices)
+    request, param = prompt.select("Menu:", choices, cycle: true)
 
     case request
         when 1

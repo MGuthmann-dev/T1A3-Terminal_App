@@ -1,4 +1,4 @@
-require_relative "../models/Pkmn    "
+require_relative "../models/Pkmn"
 require_relative "../views/index"
 require_relative "../views/create"
 require_relative "../views/show"
