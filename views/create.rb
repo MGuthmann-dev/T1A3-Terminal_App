@@ -1,5 +1,5 @@
 module Views
-    module Tasks
+    module Pkmn
         def self.create
             print "Name: "
             name = gets.chomp.strip

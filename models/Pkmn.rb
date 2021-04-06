@@ -2,7 +2,7 @@ require 'yaml'
 require_relative './ActiveRecord'
 require './lib/Logger'
 
-class Tasks < ActiveRecord
+class Pkmn < ActiveRecord
     include Logger
 
     attr_reader :name, :description, :priority
@@ -21,8 +21,8 @@ class Tasks < ActiveRecord
         @name = name
         @description = description
         @priority = priority
-        log "Created a Task"
-        log "Total Tasks: #{self.class.inst_num += 1}"
+        log "Logged a new caught pkmn"
+        log "Total Caught: #{self.class.inst_num += 1}"
     end
 
     def to_s
@@ -33,3 +33,4 @@ class Tasks < ActiveRecord
         ].join(' ')
     end
 end
+

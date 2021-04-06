@@ -9,3 +9,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "tty-table", "~> 0.12.0"
 
 gem "rspec", "~> 3.10"
+
+gem "tty-prompt"
