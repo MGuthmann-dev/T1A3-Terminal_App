@@ -3,6 +3,7 @@ require "./controllers/CatchController"
 require "tty-prompt"
 
 begin
+    print "\e[2J\e[f"
     puts""
     puts "---------- Welcome to the PokeCLI ----------"
     puts""
@@ -19,7 +20,9 @@ begin
         when 3
             CatchController::destroy(param)
         when 4
+            puts""
             puts "---------- Thank you for using the PokeCLI ---------- "
+            puts""
         end
 end
 
