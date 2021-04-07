@@ -1,28 +1,25 @@
-#!/usr/bin/env ruby
-require "./controllers/CatchController"
+require "./controller"
 require "tty-prompt"
+require "./interface"
 
+puts Int.clear
+puts Int.ball
+puts Int.welcome
 begin
-    print "\e[2J\e[f"
-    puts""
-    puts "---------- Welcome to the PokeCLI ----------"
-    puts""
     prompt = TTY::Prompt.new
-    choices = {List:1, New:2, Release:3, Quit:4 }
-        
+    choices = {Pokedex:1, "Catch List":2, Quit:3 }
     request = prompt.select("Menu:", choices, cycle: true)
 
     case request
         when 1
-            CatchController::index
+            Controller::dex
         when 2
-            CatchController::create
+            Controller::list
         when 3
-            CatchController::destroy
-        when 4
-            puts""
-            puts "---------- Thank you for using the PokeCLI ---------- "
-            puts""
-        end
-end
+            puts Int.clear
+            puts Int.ball
+            puts Int.exit
+    end
+end until request == 3
+    
 
