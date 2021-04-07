@@ -10,7 +10,7 @@ begin
     prompt = TTY::Prompt.new
     choices = {List:1, New:2, Release:3, Quit:4 }
         
-    request, param = prompt.select("Menu:", choices, cycle: true)
+    request = prompt.select("Menu:", choices, cycle: true)
 
     case request
         when 1
@@ -18,7 +18,7 @@ begin
         when 2
             CatchController::create
         when 3
-            CatchController::destroy(param)
+            CatchController::destroy
         when 4
             puts""
             puts "---------- Thank you for using the PokeCLI ---------- "

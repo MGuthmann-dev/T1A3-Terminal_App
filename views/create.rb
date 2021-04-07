@@ -2,7 +2,8 @@ module Views
     module Pkmn
         def self.create
             print "Name: "
-            name = gets.chomp.strip
+            n = gets.chomp.strip
+            name = PokeApi.get(pokemon: "#{n}")
             print "Priority: "
             priority = gets.chomp.strip.to_i
             print "Description: "
