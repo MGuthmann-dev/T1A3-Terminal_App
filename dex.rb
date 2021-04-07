@@ -8,7 +8,7 @@ module Dex
         puts Int.search
         puts "Enter in the Pokedex Number: "
         pokemon = gets.chomp.to_i
-        if pokemon && < 151
+        if pokemon < 151
             found_poke = PokeApi.get(pokemon:"#{pokemon}")
             puts "#{found_poke.name.capitalize}"
             puts "The weight of this pokemon is #{found_poke.weight}"
