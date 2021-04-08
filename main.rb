@@ -16,8 +16,8 @@ begin
             puts Int.search
             puts "Enter in the Pokemon Name: "
             dex_entry = gets.chomp.strip.to_s.downcase
+            Controller.name(dex_entry)
             # if dex_entry == true
-                Controller.name(dex_entry)
             # else
             #     puts Int.ball
             #     puts Int.return

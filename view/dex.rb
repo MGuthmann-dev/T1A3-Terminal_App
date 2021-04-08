@@ -9,7 +9,7 @@ module Dex
         puts "---------------------------------------------------------"
         Pkmn.name(poke)
         puts "---------------------------------------------------------"
-        Pkmn.type_call(poke)
+        Pkmn.type(poke)
         Pkmn.height(poke)
         Pkmn.weight(poke)
         # print_abilities
@@ -17,6 +17,7 @@ module Dex
         Pkmn.entry(txt)
         # base_stats
         Int.line
+        puts ""
 
     end
 

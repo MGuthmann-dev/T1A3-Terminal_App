@@ -8,6 +8,11 @@ module Pkmn
         Dex::dex(poke,txt,dex_entry)
     end
 
+    def self.id(poke)
+        dexid = poke.id
+        puts "#{dexid}"
+    end
+
     def self.name(poke)
         pk_name = poke.name.capitalize
         puts "\t\t#{pk_name}"
@@ -28,7 +33,7 @@ module Pkmn
         puts "\n#{entry}"
     end
 
-    def self.type_call(poke)
+    def self.type(poke)
         if poke.types[1].nil?
             puts "\tTypes:\n \t\t#{poke.types[0].type.name.capitalize}"
         else
