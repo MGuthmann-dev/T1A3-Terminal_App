@@ -1,20 +1,20 @@
-require "./controller"
 require "tty-prompt"
-require "./interface"
+require "./view/dex"
+require "./view/interface"
 
 puts Int.clear
 puts Int.ball
 puts Int.welcome
 begin
     prompt = TTY::Prompt.new
-    choices = {Pokedex:1, "Catch List":2, Quit:3 }
+    choices = {"Search by Name":1, "Search by Dex Number":2, Quit:3 }
     request = prompt.select("Menu:", choices, cycle: true)
 
     case request
         when 1
-            Controller::dex
+            Dex::dex
         when 2
-            Controller::list
+            Dex::dex
         when 3
             puts Int.clear
             puts Int.ball
