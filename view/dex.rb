@@ -1,22 +1,24 @@
 require "poke-api-v2"
 require "./view/interface"
 require "./model/poke"
+require "./control/controller"
 
 module Dex
 
-    def self.dex
+    def self.dex(poke, txt, dex_entry)
 
-        puts Int.clear
-        puts Int.ball
-        puts Int.search
+        # Int.clear
+        # Int.ball
+        # Int.search
     
-        puts "Enter in the Pokedex Number: "
-        dex_entry = gets.chomp.strip.to_i
+        # puts "Enter in the Pokedex Number: "
+        # dex_entry = gets.chomp.strip.to_i
 
-        poke = PokeApi.get(pokemon:"#{dex_entry}")
-        txt = PokeApi.get(pokemon_species:"#{dex_entry}")
+        # poke = PokeApi.get(pokemon:"#{dex_entry}")
+        # txt = PokeApi.get(pokemon_species:"#{dex_entry}")
     
        if (1..151) === dex_entry
+            Int.clear
             puts "---------------------------------------------------------"
             puts "\t\t#{poke.name.capitalize}"
             puts "---------------------------------------------------------"
@@ -26,12 +28,11 @@ module Dex
             puts ""
             puts "\n#{txt.flavor_text_entries[1].flavor_text.gsub("\f","\n")}"
             # base_stats
-            puts "---------------------------------------------------------"
-            puts "---------------------------------------------------------"
-            puts "---------------------------------------------------------"
-       else
-            puts "MissingNo. Called" 
+            Int.line
+        else
+            puts Int.ball
             puts Int.return
+            puts "MissingNo. Called" 
        end
     end
 end     

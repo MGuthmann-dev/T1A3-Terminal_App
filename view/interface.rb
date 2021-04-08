@@ -1,5 +1,6 @@
 class Int
     def self.ball
+        print "\e[2J\e[f"
         puts"                    ▄███████████▄"
         puts"                 ▄███▓▓▓▓▓▓▓▓▓▓▓███▄"
         puts"                ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███"
@@ -46,12 +47,12 @@ class Int
         puts"---------------------------------------------------------"
     end
 
-    def self.clear
-        print "\e[2J\e[f"
-    end
-
     def self.line
         puts "---------------------------------------------------------"
+    end
+
+    def self.clear
+        print "\e[2J\e[f"
     end
 
 end

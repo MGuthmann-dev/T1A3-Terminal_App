@@ -1,26 +1,22 @@
 require "./view/dex"
 require "./view/interface"
+require "./model/poke"
 
 module Controller
 
-    def self.list
-        puts Int.clear
+    def self.name
         puts Int.ball
-        catch_pick = TTY::Prompt.new
-        pick = {New:1, List:2, Release:3, Return:4 }
-        catch_request = catch_pick.select("Menu:", pick, cycle: true)
-    
-        case catch_request
-            when 1
-                CatchController::new
-            when 2
-                CatchController::list
-            when 3
-                CatchController::release
-            when 4
-                puts Int.clear
-                puts Int.ball
-                puts Int.exit
-            end
+        puts Int.search
+        puts "Enter in the Pokemon Name: "
+        dex_entry = gets.chomp.strip.to_s.downcase
+        Pkmn.all(dex_entry)
+    end
+
+    def self.num
+        puts Int.ball
+        puts Int.search
+        puts "Enter in the Pokedex Number: "
+        dex_entry = gets.chomp.strip.to_i
+        Pkmn.all(dex_entry)
     end
 end
