@@ -12,9 +12,29 @@ begin
 
     case request
         when 1
-            Controller.name
+            puts Int.ball
+            puts Int.search
+            puts "Enter in the Pokemon Name: "
+            dex_entry = gets.chomp.strip.to_s.downcase
+            # if dex_entry == true
+                Controller.name(dex_entry)
+            # else
+            #     puts Int.ball
+            #     puts Int.return
+            #     puts "MissingNo. Called" 
+            # end
         when 2
-            Controller.num
+            puts Int.ball
+            puts Int.search
+            puts "Enter in the Pokedex Number: "
+            dex_entry = gets.chomp.strip.to_i
+            if (1..151) === dex_entry
+                Controller.name(dex_entry)
+            else
+                puts Int.ball
+                puts Int.return
+                puts "MissingNo. Called" 
+            end
         when 3
             puts Int.ball
             puts Int.exit
