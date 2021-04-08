@@ -1,6 +1,4 @@
-require "poke-api-v2"
 require "./view/interface"
-# require "./model/poke"
 require "./control/controller"
 
 module Dex
