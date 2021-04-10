@@ -31,9 +31,8 @@ begin
             if (1..151) === dex_entry
                 Controller.name(dex_entry)
             else
-                puts Int.ball
-                puts Int.return
-                puts "MissingNo. Called" 
+                Int.clear
+                Int.miss
             end
         when 3
             puts Int.ball
