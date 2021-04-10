@@ -36,6 +36,7 @@ begin
             end
         when 3
             puts Int.ball
+            puts Int.meme
             puts Int.exit
     end
 

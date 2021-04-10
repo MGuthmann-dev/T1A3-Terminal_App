@@ -9,20 +9,27 @@ module Dex
 
         font = TTY::Font.new(:standard)
         pk_font = font.write("#{Pkmn.name(poke)}")
-        box = TTY::Box.frame(width: 57, height: 5, align: :center) do
+
+        box_name = TTY::Box.frame(width: 100, align: :center, border: :thick, title: {bottom_left: "  # #{Pkmn.id(poke)}  ", bottom_right: "  #{Pkmn.gene(txt)}  "}) do
+            pk_font
+        end 
+        box_entry = TTY::Box.frame(width: 100, height: 4, align: :center) do
             "#{Pkmn.entry(txt)}"
         end 
 
         Int.clear
-        puts "---------------------------------------------------------"
-        puts pk_font
-        puts "---------------------------------------------------------"
-        Pkmn.gene(txt)
+        puts box_name
+        puts ""
+        puts ""
         Pkmn.type(poke)
+        puts ""
         Pkmn.height(poke)
         Pkmn.weight(poke)
-        print box
-        Int.line
+        puts ""
+        puts ""
+        print box_entry
+        puts ""
+        Int.line    
     end
 
 end     
