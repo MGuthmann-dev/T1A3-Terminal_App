@@ -2,7 +2,7 @@
 
 [Github Repository](https://github.com/MGuthmann-dev/T1A3-Terminal_App)
 
-[PokeAPI](https://pokeapi.co/) -
+[PokeAPI](https://pokeapi.co/) - The main API used for functionality on this App.
 
 ## Purpose and Scope
 
@@ -30,7 +30,7 @@ the data accessed for the Pokedex entries come from the PokeApi (https://pokeapi
 
 ### Enhanced UI
 
-I wanted to provide as simple of an interface as possible for the user. Such as utilising "TTY-Prompt" for navigating the menu and large banners to make it visaully appealing.
+I wanted to provide as simple of an interface as possible for the user. Such as utilizing "TTY-Prompt" for navigating the menu and large banners to make it visually appealing.
 
 ## Gems utilised
 
@@ -69,3 +69,7 @@ Users are then presented with the Pokedex entry from the entered details.
 ## Flowchart
 
 ![menu](./doc/Flowchart.png)
+
+## Implementation Plan
+
+![menu](./doc/Asana.png)
