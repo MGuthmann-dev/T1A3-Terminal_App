@@ -4,6 +4,15 @@
 
 [PokeAPI](https://pokeapi.co/) - The main API used for functionality on this App.
 
+# Instructions
+
+1. Visit the repository link above and Clone/Download the repository.
+2. Open the terminal and navigate to the repository.
+3. install the gems associated with this app, this can be done via `$ bundle install`.
+4. Once the Gems have been install, you may run the app via the command `$ ruby main.rb`
+
+   Note: please see the [Gem List](##Gems-List) if unable to install gems via bundler.
+
 ## Purpose and Scope
 
 ### What will this application do?
@@ -32,7 +41,7 @@ the data accessed for the Pokedex entries come from the PokeApi (https://pokeapi
 
 I wanted to provide as simple of an interface as possible for the user. Such as utilizing "TTY-Prompt" for navigating the menu and large banners to make it visually appealing.
 
-## Gems utilised
+## Gems List
 
 - poke-api-v2
 
