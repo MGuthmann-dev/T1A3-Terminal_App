@@ -1,6 +1,10 @@
 # PokeTerminal App
 
-## Statement of Purpose and Scope
+[Github Repository](https://github.com/MGuthmann-dev/T1A3-Terminal_App)
+
+[PokeAPI](https://pokeapi.co/) -
+
+## Purpose and Scope
 
 ### What will this application do?
 
@@ -14,17 +18,17 @@ It both allows the user to access the Pokedex entries through the terminal, as w
 
 Fans of the Pokemon franchise and players of the game.
 
-# Features
+## Features
 
-## Search Functionality
+### Search Functionality
 
 The search functionality allows for the user to select to search either by the Pokemon's name or Dex ID
 
-## API calling
+### API calling
 
 the data accessed for the Pokedex entries come from the PokeApi (https://pokeapi.co/). With a highly detailed document, this made it a perfect API to utilize for accessing all the information required for the pokedex
 
-## Enhanced UI
+### Enhanced UI
 
 I wanted to provide as simple of an interface as possible for the user. Such as utilising "TTY-Prompt" for navigating the menu and large banners to make it visaully appealing.
 
@@ -64,4 +68,4 @@ Users are then presented with the Pokedex entry from the entered details.
 
 ## Flowchart
 
-![menu](./doc/flowchart.png)
+![menu](./doc/Flowchart.png)
