@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require "tty-prompt"
 require "./view/dex"
 require "./view/interface"
@@ -9,33 +11,11 @@ begin
     prompt = TTY::Prompt.new
     choices = {"Search by Name":1, "Search by Dex Number":2, Quit:3 }
     request = prompt.select("Menu:", choices, cycle: true)
-
-    case request
-        when 1
-            puts Int.ball
-            puts Int.search
-            puts "Enter in the Pokemon Name: "
-            dex_entry = gets.chomp.strip.to_s.downcase
-            Controller.name(dex_entry)
-        when 2
-            puts Int.ball
-            puts Int.search
-            puts "Enter in the Pokedex Number: "
-            dex_entry = gets.chomp.strip.to_i
-            if (1..151) === dex_entry
-                Controller.name(dex_entry)
-            else
-                Int.clear
-                Int.miss
-            end
-        when 3
-            puts Int.ball
-            puts Int.meme
-            puts Int.exit
-    end
+    Controller.dis(request)
 
 rescue
-    puts Int.miss
+    Int.clear
+    Int.miss
 
 end until request == 3
     
