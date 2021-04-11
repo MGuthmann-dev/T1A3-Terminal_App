@@ -1,4 +1,4 @@
-# PokeTerminal App
+# Poke-Terminal App
 
 [Github Repository](https://github.com/MGuthmann-dev/T1A3-Terminal_App)
 
@@ -17,7 +17,7 @@
 
 ### What will this application do?
 
-The Poketerminal Application allows for a user to search for the Pokedex entry of any of the 151 Kanto Pokemon via a Command Line Interface.
+The Poke-Terminal Application allows for a user to search for the Pokedex entry of any of the 151 Kanto Pokemon via a Command Line Interface.
 
 ### What problem is the application solving?
 
@@ -35,7 +35,7 @@ The search functionality allows for the user to select to search either by the P
 
 ### API calling
 
-the data accessed for the Pokedex entries come from the PokeApi (https://pokeapi.co/). With a highly detailed document, this made it a perfect API to utilize for accessing all the information required for the pokedex
+The data accessed for the Pokedex entries in Poke-Terminal come from the PokeApi (https://pokeapi.co/). With a highly detailed document, this made it a perfect API to utilize for accessing all the information required for the Pokedex.
 
 ### Enhanced UI
 
