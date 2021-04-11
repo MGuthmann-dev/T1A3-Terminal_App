@@ -17,12 +17,6 @@ begin
             puts "Enter in the Pokemon Name: "
             dex_entry = gets.chomp.strip.to_s.downcase
             Controller.name(dex_entry)
-            # if dex_entry == true
-            # else
-            #     puts Int.ball
-            #     puts Int.return
-            #     puts "MissingNo. Called" 
-            # end
         when 2
             puts Int.ball
             puts Int.search
@@ -39,6 +33,9 @@ begin
             puts Int.meme
             puts Int.exit
     end
+
+rescue
+    puts Int.miss
 
 end until request == 3
     

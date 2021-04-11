@@ -20,14 +20,15 @@ module Dex
         Int.clear
         puts box_name
         puts ""
+        print box_entry
         puts ""
         Pkmn.type(poke)
         puts ""
         Pkmn.height(poke)
         Pkmn.weight(poke)
         puts ""
+        Pkmn.abil(poke)
         puts ""
-        print box_entry
         puts ""
         Int.line    
     end

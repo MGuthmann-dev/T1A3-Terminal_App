@@ -1,4 +1,6 @@
 require "poke-api-v2"
+require "rainbow"
+require "./model/type_colour"
 
 module Pkmn
 
@@ -38,14 +40,28 @@ module Pkmn
     end
 
     def self.type(poke)
+        pk_type1 = poke.types[0].type.name.capitalize
+        cl_1 = Type_Colour.dis(pk_type1)
+        
         if poke.types[1].nil?
             puts "\tType:"
-            puts "\t\t#{poke.types[0].type.name.capitalize}"
+            puts "\t\t#{Rainbow("  #{pk_type1}  ").bg(cl_1)}"
         else
+            pk_type2 = poke.types[1].type.name.capitalize
+            cl_2 = Type_Colour.dis(pk_type2)
             puts "\tType:"
-            puts "\t\t#{poke.types[0].type.name.capitalize}\n\t\t#{poke.types[1].type.name.capitalize}"
+            puts "\t\t#{Rainbow("  #{pk_type1}  ").bg(cl_1)}  #{Rainbow("  #{pk_type2}  ").bg(cl_2)}"
         end
     end
 
+    def self.abil(poke)
+        if poke.abilities[1].nil?
+            puts "\tAbilities:"
+            puts "\t\t#{poke.abilities[0].ability.name.capitalize}"
+        else
+            puts "\tAbilities:"
+            puts "\t\t#{poke.abilities[0].ability.name.capitalize}\n\t\t#{poke.abilities[1].ability.name.capitalize}"
+        end
+    end
 
 end
